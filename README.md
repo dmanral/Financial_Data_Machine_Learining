@@ -1,2 +1,40 @@
-# Financial_Data_Machine_Learining
-Collecting data and using it for different thing in python.
+# Financial Data and Machine Learining
+Collecting data and using it for different things in python.
+
+## Part 1: (sp500_data_collection.py and sp500_data_collection_2.py) ##
+  - We start by scrubbing the S&P 500 Wikipedia page to get the ticker symbols for the companies that are in S&P 500.
+  - We then use pickling to searilize the ticker symbols. (sp500tickers.pickle and sp500tickers_sectors.pickle)
+  - We then use the pickle file to collect data from Yahoo Finance. *(This takes a while depending on the date range picked and individual 
+  internet speed.!!)*
+  - Collecting data from Yahoo finance will create a directory called 'stock_dfs' in which there are csv files for all 
+  the individual S&P 500 companies.
+  - All of the companies' files are organized as follows:
+  
+        - First Column: Dates
+        
+        - Second Column: High
+        
+        - Third Column: Low
+        
+        - Fourth Column: Open
+        
+        - Fifth Column: Close
+        
+        - Sixth Column: Volume
+        
+        - Seventh Column: Adjusted Close
+
+## Part 2: (sp500_data_compilation.py and sp500_data_visualization.py) ##
+  - All of the data we have collected so far are in individual csv files, therefore, we need to find a way to compile them.
+  - For the sake of this project I will be using just the Adjusted Close, therefore, when compiling the data we can dump the other 
+  columns.
+  -The compiled data is saved in a csv file and is organized as follows:
+  
+        - Row header: Date
+        
+        - Column Header: Ticker Symbol
+        
+        - In-between: Adjusted closing prices for that date for the individual tickers.
+       
+## Part 3: (sp500_data_ml.py) ##
+    - To be continued...
