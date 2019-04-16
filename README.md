@@ -37,4 +37,23 @@ Collecting data and using it for different things in python.
         - In-between: Adjusted closing prices for that date for the individual tickers.
        
 ## Part 3: (sp500_data_ml.py) ##
-    - To be continued...
+    - This is where we can finally use our data and use the machine learning framework provided by python.
+    - This is just the tip of the ice berg when it comes to machine learning. It was my first exposure to it.
+    - We are hoping that the algorithms will be able to map the relationships of existing price changes to the future price changes for
+    a company.
+    - The output when running this file is as follows:
+    
+        - Data Spread : Counter({'1':#, '-1':#, '0':#})
+        
+        - Accuracy: 0.#
+        
+        - Predicted Spread: Counter({'1':#, '-1':#, '0':#})
+     
+ ## Source: ##
+    - I basically followed the tutorial that can be found [here](https://pythonprogramming.net/getting-stock-prices-python-programming-for-finance/).
+ 
+ ## Notes ##
+    - You can actually copy and paste all of the codes in the files provided and create one long file to run.
+    - Since, I did this to learn it was just more helpful for myself to seperate the files.
+    - I also have a lot of comments in each of the files because writing those helped me understand it better.
+    - Thank you [sentdex](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ) for excellent videos that I could do all this from.
