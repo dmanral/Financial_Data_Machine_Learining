@@ -50,11 +50,10 @@ Collecting data and using it for different things in python.
         - Predicted Spread: Counter({'1':#, '-1':#, '0':#})
      
  ## Source: ##
-    - I basically followed the tutorial that can be found at https://pythonprogramming.net .
-    - You can also look up **sentdex** on youtube.
+   - I basically followed the tutorial that can be found [here](https://pythonprogramming.net/getting-stock-prices-python-programming-for-finance/).
  
  ## Notes ##
-    - You can actually copy and paste all of the codes in the files provided and create one long file to run.
-    - Since, I did this to learn it was just more helpful for myself to seperate the files.
-    - I also have a lot of comments in each of the files because writing those helped me understand it better.
-    - Thank you sentdex for great tutorials.
+   - You can actually copy and paste all of the codes in the files provided and create one long file to run.
+   - Since, I did this to learn it was just more helpful for myself to seperate the files.
+   - I also have a lot of comments in each of the files because writing those helped me understand it better.
+   - Thank you [sentdex](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ) for great tutorials on youtube.
