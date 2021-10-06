@@ -24,7 +24,7 @@ def save_sp500_tickers():
     # Empty tickers list.
     tickers = []
     for row in table.findAll('tr')[1:]:        # We dont need the first row because it is column titles.
-        ticker = row.findAll('td')[1].text     # The symbols are in the 2nd row. (first_row = 0, second_row = 1, ..., etc.)
+        ticker = row.findAll('td')[0].text     # The symbols are in the 2nd row. (first_row = 0, second_row = 1, ..., etc.)
         tickers.append(ticker)                 # Add tickers into the ticker list.
 
     # Saving the data gathered for future use as sp500tickers.pickle.
@@ -36,8 +36,9 @@ def save_sp500_tickers():
 
 # Now that we have all the companies we need to find data of we can collect the data we need.
 def get_data_from_yahoo(reload_sp500=False):    # Since we are not calling previous function.
-    if reload_sp500:
+    if not reload_sp500:
         tickers = save_sp500_tickers()          # We will call it here if we need to.
+        print(tickers)
     else:
         with open("sp500tickers.pickle", "rb") as f:    # We are reading the file since it already has symbols in it.
             tickers = pickle.load(f)

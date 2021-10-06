@@ -53,8 +53,8 @@ def save_sp500_tickers_sectors():
 
 # Now that we have all the companies we need to find data of we can collect the data we need.
 def get_data_from_yahoo(reload_sp500=False):    # Since we are not calling previous function.
-    if reload_sp500:
-        tickers_sectors = save_sp500_tickers()          # We will call it here if we need to.
+    if not reload_sp500:
+        tickers_sectors = save_sp500_tickers_sectors()          # We will call it here if we need to.
     else:
         with open("sp500tickers_sectors.pickle", "rb") as f:    # We are reading the file since it already has symbols in it.
             tickers_sectors = pickle.load(f)
@@ -73,6 +73,9 @@ def get_data_from_yahoo(reload_sp500=False):    # Since we are not calling previ
         if not os.path.exists('stock_dfs/{}.csv'.format(ticker)):
             # Had to replace just ticker with ticker.replace('.','-') because of tickers with '.' in them.
             df = web.DataReader(ticker.replace('.','-'), 'yahoo', start, end)
+            df.reset_index(inplace=True)
+            df.set_index("Date", inplace=True)
+            df = df.drop("Symbol", axis=1)
             df.to_csv('stock_dfs/{}.csv'.format(ticker))
         else:
             print('Already have {}!'.format(ticker))

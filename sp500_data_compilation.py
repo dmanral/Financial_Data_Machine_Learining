@@ -12,7 +12,7 @@ def compile_data():
     # Creating our data frame.
     main_df = pd.DataFrame()        # Start with an empty data frame.
     for count, ticker in enumerate(tickers):    # Enumerate lets us count things. Count tells us where we are.
-        df = pd.read_csv('stock_dfs/{}.csv'.format(ticker))
+        df = pd.read_csv('stock_dfs/{}.csv'.format(ticker.replace('.', '-')))
         df.set_index('Date', inplace=True)
 
         df.rename(columns={'Adj Close': ticker}, inplace=True)  # Rename Adj Close to the ticker symbol.
